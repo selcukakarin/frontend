@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title> tablolar</title>
+    <style>
+        fieldset {
+            width: 400px;
+            background-color: #efbac5;
+        }
+
+            fieldset legend {
+                font-size: 18px;
+                font-style: italic;
+                font-weight: bold;
+            }
+
+        input[type=text] {
+            background-color: blue;
+            color: white;
+            width: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="" method="">
+
+        <fieldset>
+            <legend>Kişisel bilgiler</legend>
+
+            <p>
+
+                <label for="isim">İsim:</label><input type="text" name="isim" id="isim">
+
+            </p>
+            <p>
+
+                <label for="soyisim">Soyisim:</label><input type="text" name="soyisim" id="soyisim">
+
+            </p>
+            <p>
+
+                <label for="email">Email:</label><input type="text" name="email" id="email ">
+
+            </p>
+
+            <p>
+
+                <label for="adres">Adresiniz</label><br>
+                <textarea name="adres" id="adres" rows="10" cols="25" placeholder="adresiniz!.."></textarea>
+
+            </p>
+            <p>
+                <label for="sehir">Nerede yaşıyorsunuz?</label>
+                <select name="sehir" id="sehir">
+
+                    <option value="Ankara">Ankara </option>
+                    <option value="Istanbul" selected>İstanbul </option>
+                    <option value="Izmir">İzmir </option>
+
+                </select>
+            </p>
+            <p>
+                Bildirim almak ister misiniz?
+                <label for="evet">Evet</label><input type="radio" name="evet" id="evet">
+                <label for="hayır">Hayır</label><input type="radio" name="evet" id="hayır">
+
+
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Hobiler</legend>
+
+            <label for="basket">Basketbol Oynamak</label><input type="checkbox" name="hobiler" value="basket" id="basket" />
+            <label for="gitar">Gitar Çalmak</label><input type="checkbox" name="hobiler" value="gitar" id="gitar" />
+            <label for="resim">resim yapmak</label><input type="checkbox" name="hobiler" value="resim" id="resim" />
+
+        </fieldset>
+
+
+    </form>
+</body>
+
+</html>
