@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tabs</h1>
+    <div class="tabs">
+        <nav class="tab-list">
+            <a class="tab active" href="#one">One</a>
+            <a class="tab" href="#two">Two</a>
+            <a class="tab" href="#three">Three</a>
+        </nav>
+        <div id="one" class="tab-content show">
+            Pellentesque consequat lectus nibh, a consequat eros fringilla non. Interdum et malesuada fames ac ante
+            ipsum primis in faucibus. Aliquam urna nibh, pharetra vel placerat in, egestas nec lectus. Praesent nisi
+            ipsum, ullamcorper sit amet rutrum vel, fermentum vitae leo. Morbi lobortis suscipit dolor. Integer a purus
+            neque. Vivamus pretium diam nec lobortis pretium. Nullam libero tellus, lacinia et consequat quis, viverra
+            auctor turpis. Morbi erat sapien, malesuada a nisi sed, feugiat ultricies nisl. Curabitur ornare urna leo,
+            vitae auctor massa tempus sodales. Pellentesque malesuada fringilla dui vel imperdiet. Pellentesque massa
+            mauris, vehicula vitae gravida et, varius sed risus. Suspendisse suscipit rutrum sem, sed aliquet tortor
+            ornare eu.
+        </div>
+        <div id="two" class="tab-content">
+            Sed eget dolor a ex sollicitudin feugiat non tempus dolor. Donec vulputate lacus sit amet hendrerit
+            commodo. In hac habitasse platea dictumst. Integer pretium, quam bibendum tempor consequat, massa velit
+            lobortis mauris, hendrerit luctus arcu tortor malesuada lacus. Nunc accumsan euismod enim vel dignissim. Ut
+            lorem lorem, accumsan id condimentum eget, aliquam ut ante. Proin accumsan bibendum leo ac consequat. Orci
+            varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+            Nulla vehicula purus consequat lectus vulputate vulputate. Integer lobortis ut ipsum in scelerisque. Ut
+            libero metus, sollicitudin nec sagittis nec, rutrum id leo. Quisque bibendum, diam ac faucibus dictum,
+            massa diam volutpat ex, sit amet venenatis tortor turpis eget ex. Phasellus hendrerit libero a orci
+            facilisis, vel imperdiet arcu consequat. Aenean nec arcu non quam accumsan elementum. Vestibulum ante ipsum
+            primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi non mauris vel ex vulputate
+            iaculis. Nunc mauris enim, faucibus quis sapien eu, aliquet gravida felis. Nam quis nunc arcu. Proin arcu
+            lacus, posuere nec nisi sit amet, cursus ullamcorper tellus. In ut dignissim justo. Cras eget laoreet nisl.
+        </div>
+        <div id="three" class="tab-content ">
+            Etiam in aliquet tellus, pretium tempus risus. In hac habitasse platea dictumst. Aliquam vehicula leo nec
+            ante tincidunt condimentum id eu dolor. Pellentesque rhoncus orci nunc, ac condimentum eros fringilla sit
+            amet. Curabitur facilisis sollicitudin urna, id imperdiet tellus bibendum quis. Praesent quis elit et
+            mauris vehicula mattis. Vestibulum ultrices lorem nec varius aliquet. Suspendisse ut augue velit. Cras
+            lobortis ipsum et euismod imperdiet. Sed et justo vulputate, pellentesque nulla non, lacinia arcu. Vivamus
+            venenatis vestibulum nisl vitae semper. Maecenas ac posuere lectus, non gravida libero. Vestibulum et
+            mollis dolor.
+        </div>
+    </div>
+<script>
+
+    $(".tab-list").on("click",".tab",function(){
+        $(".tab").removeClass("active");
+        $(".tab-content").removeClass("show");
+        $(this).addClass("active");
+        $($(this).attr("href")).addClass("show");
+    })
+
+</script>
+
+</body>
+
+</html>
