@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<script>
+
+    function tikla() {
+        // var elementler = document.getElementsByTagName("p");
+
+
+        ///* window.alert(elementler.length);
+        // elementler[0].style.color = "red";
+        // elementler[1].style.color = "red";
+        // elementler[4].style.color = "red";*/
+
+        // var x = 0;
+         //for (; x < elementler.length; x++) {
+         //    elementler[x].style.visibility = "hidden";
+         //}
+
+        var elementler = document.getElementsByClassName("class1");
+        var x = 0;
+        window.alert(elementler.length);
+        for (; x < elementler.length; x++) {
+            elementler[x].style.backgroundColor = "gray";
+        }
+
+    }
+
+</script>
+
+<body>
+
+    <p class="class1">Selçuk akarın</p>
+    <p class="class1">Selçuk akarın</p>
+    <p class="class1">Selçuk akarın</p>
+    <p>Selçuk akarın</p>
+    <p>Selçuk akarın</p>
+    <p>Selçuk akarın</p>
+    <p>Selçuk akarın</p>
+    <p>Selçuk akarın</p>
+    <p>Selçuk akarın</p>
+
+    <button onclick="tikla()">Tıkla!</button>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <div id="app1">
+        <h1 ref="heading">{{ title }}</h1>
+        <button v-on:click="show" ref="myButton">Paragrafı Göster</button>
+        <p v-if="showParagraph">Her zaman göremeyebiliriz!!</p>
+    </div>
+
+    <div id="app2">
+        <h1 ref="heading">{{ title }}</h1>
+        <button @click="changeTitle">Değiştir</button>
+    </div>
+
+
+    <script src="vue.js"></script>
+</body>
+
+</html>

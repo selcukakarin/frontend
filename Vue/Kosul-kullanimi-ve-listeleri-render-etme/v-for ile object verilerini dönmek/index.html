@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <div id="app">
+        <ul>
+            <li v-for="person in persons">
+                <ul>
+                    <li v-for="(value, key ,index) in person">
+                        <strong>{{key}}</strong> : {{value}} {{index}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li v-for="(product, index) in products">{{product}} - {{ index }}</li>
+        </ul>
+        <hr>
+        <div v-for="(product, index) in products">
+            <h3>{{product}}</h3>
+            <p>{{ index }}</p>
+        </div>
+        <hr>
+        <template v-for="(product, index) in products">
+            <h3>{{product}}</h3>
+            <p>{{ index }}</p>
+        </template>
+
+        <span v-for="i in 5"> {{ i }}</span>
+
+    </div>
+
+    <script src="vue.js"></script>
+</body>
+
+</html>

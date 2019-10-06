@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script>
+        function yenikisim() {
+            var metin = document.getElementById("textarea").value;
+
+            var yenielement = document.createElement("p");
+
+            var icerik = document.createTextNode(metin);
+
+            yenielement.appendChild(icerik);
+
+            var anakisim = document.getElementById("anakısım");
+
+            anakisim.appendChild(yenielement);
+
+
+
+        }
+
+        function sil() {
+
+            var elementler = document.getElementsByTagName("p");
+
+            if (elementler.length != 0) {
+                var element = elementler[elementler.length - 1];
+
+                var anne = element.parentNode;
+
+                anne.removeChild(element);
+
+            }
+
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <div id="anakısım" >
+
+        <h3>Birinci Hikaye</h3>
+        <p>
+            sdasadfddddddddddddddddddddddddddddddddddddddddddddddddddd
+            ddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            ddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            sdasadfddddddddddddddddddddddddddddddddddddddddddddddddddd
+            dddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            sdasadfddddddddddddddddddddddddddddddddddddddddddddddddddd
+            dddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            sdasadfddddddddddddddddddddddddddddddddddddddddddddddddddd
+            dddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+        </p>
+        <h3>İkinici Hikaye</h3>
+        <p>
+            sdasadfddddddddddddddddddddddddddddddddddddddddddddddddddd
+            ddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            ddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            sdasadfddddddddddddddddddddddddddddddddddddddddddddddddddd
+            dddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            sdasadfddddddddddddddddddddddddddddddddddddddddddddddddddd
+            dddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            sdasadfddddddddddddddddddddddddddddddddddddddddddddddddddd
+            dddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+        </p>
+
+    </div>
+
+    <textarea id="textarea" rows="10" cols="30"></textarea>
+
+    <button onclick="yenikisim()">Yeni Kısım Ekle</button>
+    <button onclick="sil()">Sil</button>
+
+
+</body>
+</html>

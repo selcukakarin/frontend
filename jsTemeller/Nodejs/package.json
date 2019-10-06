@@ -1,0 +1,21 @@
+{
+  "name": "selcuk-akarin",
+  "version": "1.0.0",
+  "description": "deneme paketi",
+  "main": "index.js",
+  "dependencies": {
+    "simple-is": "^0.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "selcuk":"echo 'selam selcuk'",
+    "start":"node index.js"
+  },
+  "keywords": [
+    "deneme",
+    "paket"
+  ],
+  "author": "selçuk akarın",
+  "license": "ISC"
+}

@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style>
+
+        .kirmizi{
+            color:red;
+            background-color:yellow;
+        }
+
+    </style>
+
+    <script>
+
+        function degistir() {
+
+            var elementler = document.getElementsByTagName("h3");
+            var i = 0;
+            for (; i < elementler.length; i++) {
+                var ozellik = document.createAttribute("class");
+                ozellik.value = "kirmizi";
+
+                elementler[i].setAttributeNode(ozellik);
+            }
+
+            var hrefozelligi = document.createAttribute("href");
+            hrefozelligi.value = "https://www.google.com";
+            document.getElementById("aetiket").setAttributeNode(hrefozelligi);
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <div id="anakısım">
+
+        <h3>Birinci Hikaye</h3>
+        <p>
+            sdasadfddddddddddddddddddddddddddddddddddddddddddddddddddd
+            ddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            ddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            sdasadfddddddddddddddddddddddddddddddddddddddddddddddddddd
+            dddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            sdasadfddddddddddddddddddddddddddddddddddddddddddddddddddd
+            dddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            sdasadfddddddddddddddddddddddddddddddddddddddddddddddddddd
+            dddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+        </p>
+        <h3>İkinici Hikaye</h3>
+        <p>
+            sdasadfddddddddddddddddddddddddddddddddddddddddddddddddddd
+            ddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            ddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            sdasadfddddddddddddddddddddddddddddddddddddddddddddddddddd
+            dddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            sdasadfddddddddddddddddddddddddddddddddddddddddddddddddddd
+            dddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            sdasadfddddddddddddddddddddddddddddddddddddddddddddddddddd
+            dddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+        </p>
+
+        <a id="aetiket">Buraya tıklayın</a>
+
+    </div>
+
+    <button onclick="degistir()">DEgistir</button>
+
+
+</body>
+</html>
