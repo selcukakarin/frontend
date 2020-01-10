@@ -39,7 +39,7 @@ class Request {
     async delete(url){
 
 
-        const response = await fetch('https://jsonplaceholder.typicode.com/albums/1', {
+        const response = await fetch(url, {
                 method: 'DELETE'
                 }); // Response Object
         
