@@ -11,20 +11,20 @@ function submitForm(e){
     e.preventDefault();
 
 }
-// filterInput.addEventListener("focus",function(e){
+filterInput.addEventListener("focus",function(e){
 
-//     console.log(e);
-//     console.log(e.type);
-//     console.log(e.target);
-//     console.log(e.target.placeholder);
-//     console.log(e.target.className);
-
-
-//     // console.log("Naber");
+    console.log(e);
+    console.log(e.type);
+    console.log(e.target);
+    console.log(e.target.placeholder);
+    console.log(e.target.className);
 
 
-// });
-// filterInput.onfocus = function(){
-//     console.log("Naber");
+    // console.log("Naber");
 
-// }
+
+});
+filterInput.onfocus = function(){
+    console.log("Naber");
+
+}

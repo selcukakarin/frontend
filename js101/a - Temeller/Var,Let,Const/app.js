@@ -1,30 +1,30 @@
 // Var 
 
-// var name = "Mustafa Murat";
-// console.log(name);
+var name = "Mustafa Murat";
+console.log(name);
 
-// name = "Murat";
+name = "Murat";
 
-// console.log(name);
+console.log(name);
 
 // Let
 
-// let a,b;
+let a,b;
 
-// a = 10;
-// b = 20;
+a = 10;
+b = 20;
 
-// console.log(a+b);
+console.log(a+b);
 
 // Const
 
-// const name = "Mustafa Murat";
+const name = "Mustafa Murat";
 
-// console.log(name);
+console.log(name);
 
-// name = "Murat";
+name = "Murat";
 
-// console.log(name);
+console.log(name);
 
 const a = [1,2,3,4,5];
 

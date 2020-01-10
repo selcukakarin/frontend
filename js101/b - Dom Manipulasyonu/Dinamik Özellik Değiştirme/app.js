@@ -1,14 +1,12 @@
 const todoInput = document.getElementById("todo");
 let element;
 
-
 element = todoInput;
 element = todoInput.classList;
 
-// todoInput.classList.add("newClass");
-// todoInput.classList.add("newClass2");
-// todoInput.classList.remove("form-control");
-
+todoInput.classList.add("newClass");
+todoInput.classList.add("newClass2");
+todoInput.classList.remove("form-control");
 
 element = todoInput;
 element = todoInput.placeholder;
@@ -18,6 +16,6 @@ todoInput.setAttribute("title","Input");
 todoInput.removeAttribute("name");
 
 element = todoInput;
-// element = todoInput.hasAttribute("name");
+element = todoInput.hasAttribute("name");
 
 console.log(element);

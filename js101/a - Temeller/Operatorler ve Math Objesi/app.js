@@ -7,11 +7,11 @@ const value2 = 4;
 
 // Aritmetik Operatörler
 
-// value = value1 + value2;
-// value = value1 - value2;
-// value = value1 * value2;
-// value = value1 / value2;
-// value = value1 % value2;
+value = value1 + value2;
+value = value1 - value2;
+value = value1 * value2;
+value = value1 / value2;
+value = value1 % value2;
 
 
 value = Math.PI;
@@ -41,13 +41,9 @@ value = Math.pow(4,2);
 value = Math.max(10,-1,100,32);
 value = Math.min(10,-1,100,32);
 
-
 value = Math.random();
 
 value = Math.floor(Math.random() * 20 + 1);
-
-
-
 
 console.log(value);
 

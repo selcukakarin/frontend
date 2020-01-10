@@ -24,6 +24,7 @@ document.getElementById("btn").addEventListener("click",function(){
         
         }
     }
+    // onload'ın alternatifi - ilkel
     // xhr.onreadystatechange = function(){
 
     //     if(this.status == 200 && this.readyState == 4) {

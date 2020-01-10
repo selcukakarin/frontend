@@ -1,6 +1,5 @@
 let jsonString = '{ "age": 30}';
 
-
 try {
     const user = JSON.parse(jsonString);
     console.log(user.age);

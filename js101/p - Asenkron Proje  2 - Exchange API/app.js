@@ -5,7 +5,6 @@ const secondSelect = document.querySelector("#secondCurrency");
 const currency = new Currency("USD","TRY");
 const ui = new UI(firstSelect,secondSelect);
 
-
 eventListeners();
 
 function eventListeners(){

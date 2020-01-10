@@ -46,10 +46,6 @@ function clearAllSearched(){
         Storage.clearAllSearchedUsersFromStorage(); // Storagedan Temizleme
         ui.clearAllSearchedFromUI();
     }
-
-
-
-
 }
 function getAllSearched(){
     // Arananları Storagedan al ve Uiye ekle

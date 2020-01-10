@@ -16,9 +16,7 @@ class Request {
                 }); // Response Object
 
         const responsedata = await response.json();
-
         return responsedata;
-        
 
     }
 
@@ -55,27 +53,25 @@ class Request {
 }
 const request = new Request();
 
-// request.get("https://jsonplaceholder.typicode.com/albums")
-// .then(albums => {
+request.get("https://jsonplaceholder.typicode.com/albums")
+.then(albums => {
     
-//     console.log(albums);
-// })
-// .catch(err => console.log(err));
+    console.log(albums);
+})
+.catch(err => console.log(err));
 
-// request.post("https://jsonplaceholder.typicode.com/albums",{userId:1,title:"Thriller"})
-// .then(newAlbum => console.log(newAlbum))
-// .catch(err => console.log(err));
-
-
-// request.put("https://jsonplaceholder.typicode.com/albums/10",{userId:10,title:"Tarkan Karma"})
-// .then(album => console.log(album))
-// .catch(err => console.log(err));
+request.post("https://jsonplaceholder.typicode.com/albums",{userId:1,title:"Thriller"})
+.then(newAlbum => console.log(newAlbum))
+.catch(err => console.log(err));
 
 
+request.put("https://jsonplaceholder.typicode.com/albums/10",{userId:10,title:"Tarkan Karma"})
+.then(album => console.log(album))
+.catch(err => console.log(err));
 
-// request.delete("https://jsonplaceholder.typicode.com/albums/1")
-// .then(message => console.log(message) )
-// .catch(err => console.log(err));
+request.delete("https://jsonplaceholder.typicode.com/albums/1")
+.then(message => console.log(message) )
+.catch(err => console.log(err));
 
 
 

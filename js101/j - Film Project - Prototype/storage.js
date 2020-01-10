@@ -7,9 +7,6 @@ Storage.prototype.addFilmToStorage = function(newFilm){
     films.push(newFilm);
     localStorage.setItem("films",JSON.stringify(films));
 
-
-
-
 }
 Storage.prototype.getFilmsFromStorage = function(){
     let films;
@@ -34,9 +31,6 @@ Storage.prototype.deleteFilmFromStorage = function(filmTitle){
     });
 
     localStorage.setItem("films",JSON.stringify(films));
-
-
-
 
 }
 Storage.prototype.clearAllFilmsFromStorage = function(){

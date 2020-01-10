@@ -10,10 +10,8 @@ class Storage {
         }
         else {
             users = JSON.parse(localStorage.getItem("searched"));
-
         }
         return users;
-
     }
     static addSearchedUserToStorage(username){
         // Kullanıcı Ekle
@@ -25,13 +23,10 @@ class Storage {
             users.push(username);
         }
         localStorage.setItem("searched",JSON.stringify(users));
-
-
     }
     static clearAllSearchedUsersFromStorage(){
         // Tüm kullanıcıları sil
 
         localStorage.removeItem("searched");
     }
-
 }

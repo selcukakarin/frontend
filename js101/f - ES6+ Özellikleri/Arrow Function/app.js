@@ -1,29 +1,28 @@
-// const merhaba = function(){
-//     console.log("Merhaba");
+const merhaba = function(){
+    console.log("Merhaba");
 
-// }
+}
 
-// merhaba();
+merhaba();
 
 // Arrow Function
 
-// const merhaba = () => {
-//     console.log("Merhaba");
+const merhaba = () => {
+    console.log("Merhaba");
 
-// }
-// merhaba();
+}
+merhaba();
 
-// const merhaba = (firstName,lastName) => console.log("Merhaba",firstName,lastName);
+const merhaba = (firstName,lastName) => console.log("Merhaba",firstName,lastName);
 
-// merhaba("Murat","Coşkun");
+merhaba("Murat","Coşkun");
 
-// const cube = function(x){
-//     return x * x* x;
-// }
-// console.log(cube(4));
+const cube = function(x){
+    return x * x* x;
+}
+console.log(cube(4));
 
 const cube = x => x * x* x;
-
 
 console.log(cube(4));
 

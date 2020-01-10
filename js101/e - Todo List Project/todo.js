@@ -25,15 +25,7 @@ function clearAllTodos(e){
             todoList.removeChild(todoList.firstElementChild);
         }
         localStorage.removeItem("todos");
-        
-       
-
-
     }
-    
-    
-
-
 
 }
 function filterTodos(e){
@@ -50,9 +42,6 @@ function filterTodos(e){
         else {
             listItem.setAttribute("style","display : block");
         }
-
-        
-
     });
 
 }
@@ -185,10 +174,6 @@ function addTodoToUI(newTodo){ // String değerini list item olarak UI'ya ekleye
 
    todoList.appendChild(listItem);
    todoInput.value = "";
-
-
-   
-
 
 }
 

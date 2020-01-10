@@ -7,8 +7,8 @@ function Person(name,age){
 Person.prototype.showInfos = function(){
     console.log("İsim: " + this.name + " Yaş: " + this.age);
 }
-// const person = new Person("Mustafa",25);
-// console.log(person);
+const person = new Person("Mustafa",25);
+console.log(person);
 
 function Employee(name,age,salary){
     // this.name = name;
@@ -28,9 +28,9 @@ Employee.prototype.showInfos = function(){
 }
 const emp = new Employee("Mustafa",25,4000);
 
-// console.log(emp);
-// emp.showInfos();
-// emp.toString();
+console.log(emp);
+emp.showInfos();
+emp.toString();
 
 console.log(emp);
 

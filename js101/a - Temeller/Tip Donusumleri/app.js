@@ -33,8 +33,6 @@ const a = Number("34") + 53;
 console.log(a);
 console.log(typeof a);
 
-
-
 console.log(value);
 console.log(typeof value);
 

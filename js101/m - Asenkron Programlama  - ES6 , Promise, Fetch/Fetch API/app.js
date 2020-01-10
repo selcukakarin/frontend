@@ -21,9 +21,9 @@ function getExternalAPI(){
     })
     .catch(err => console.log(err));
 }
-// getTextFile();
-// getJsonFile();
-// getExternalAPI();
+getTextFile();
+getJsonFile();
+getExternalAPI();
 
 // https://api.exchangeratesapi.io/latest
 

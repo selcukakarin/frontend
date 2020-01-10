@@ -30,7 +30,6 @@ Translate.prototype.translateWord = function(callback){
 
     this.xhr.send();
 
-
 };
 Translate.prototype.changeParameters = function(newWord,newLanguage) {
     this.word = newWord;

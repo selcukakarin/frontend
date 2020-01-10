@@ -14,13 +14,13 @@ function addNumbers(number3,number4){
         
     console.log(this.number1 + this.number2 + number3 + number4);
 }
-// addNumbers(100,200);
+addNumbers(100,200);
 
-// addNumbers.call(obj1,100,200);
-// addNumbers.call(obj2,100,200);
+addNumbers.call(obj1,100,200);
+addNumbers.call(obj2,100,200);
 
-// addNumbers.apply(obj1,[100,200]);
-// addNumbers.apply(obj2,[100,200]);
+addNumbers.apply(obj1,[100,200]);
+addNumbers.apply(obj2,[100,200]);
 
 // Bind
 

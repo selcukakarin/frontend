@@ -1,17 +1,17 @@
 // Event Bubbling
 
-// document.querySelector(".container").addEventListener("click",function(){
-//     console.log("Div Container");
+document.querySelector(".container").addEventListener("click",function(){
+    console.log("Div Container");
 
-// });
-// document.querySelector(".card.row").addEventListener("click",function(){
-//     console.log("Card Row");
+});
+document.querySelector(".card.row").addEventListener("click",function(){
+    console.log("Card Row");
     
-// });
-// document.querySelectorAll(".card-body")[1].addEventListener("click",function(){
-//     console.log("Card Body");
+});
+document.querySelectorAll(".card-body")[1].addEventListener("click",function(){
+    console.log("Card Body");
     
-// });
+});
 
 // Event Capturing veya Delegation
 
@@ -30,6 +30,6 @@ function run(e){
         console.log("Tüm taskları silme işlemi");
         
     }
-    // console.log(e.target);
+    console.log(e.target);
 
 }

@@ -15,10 +15,6 @@ const person = {
     }
 
     // this - Window
-
-
-
-
 }
 
 person.tellAge();

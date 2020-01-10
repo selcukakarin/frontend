@@ -1,56 +1,56 @@
 // Fonksiyon Tanımlama
 
-// function merhaba(name = "Bilgi Yok",age = "Bilgi Yok"){
+function merhaba(name = "Bilgi Yok",age = "Bilgi Yok"){
 
-//     // if (typeof name === "undefined") name = "Bilgi Yok";
+    // if (typeof name === "undefined") name = "Bilgi Yok";
 
-//     // if(typeof age === "undefined") age = "Bilgi Yok";
+    // if(typeof age === "undefined") age = "Bilgi Yok";
 
-//     console.log(`İsim: ${name} Yaş: ${age}`);
-// }
+    console.log(`İsim: ${name} Yaş: ${age}`);
+}
 
-// merhaba("Murat",25); // Fonksiyon Çağrısı (Function Call)
+merhaba("Murat",25); // Fonksiyon Çağrısı (Function Call)
 
-// merhaba("Ayşe",30);
+merhaba("Ayşe",30);
 
-// merhaba();
+merhaba();
 
-// merhaba("Kadir");
+merhaba("Kadir");
 
 
-// function square(x) {
-//     return x * x;
+function square(x) {
+    return x * x;
 
-//     console.log("Naber"); // Hiç bir zaman çalıştırılmaz.
+    console.log("Naber"); // Hiç bir zaman çalıştırılmaz.
 
-// }
-// function cube(x) {
-//     return x*x*x;
-// }
+}
+function cube(x) {
+    return x*x*x;
+}
 
-// let a = cube(square(12));
+let a = cube(square(12));
 
-// console.log(a);
+console.log(a);
 
-// function merhaba(){
-//     return "Merhaba";
-// }
+function merhaba(){
+    return "Merhaba";
+}
 
-// console.log(merhaba());
+console.log(merhaba());
 
 // Function Expression
 
-// const merhaba = function(name){
-//     console.log("Merhaba " + name);
-// };
+const merhaba = function(name){
+    console.log("Merhaba " + name);
+};
 
-// merhaba("Murat");
+merhaba("Murat");
 
 // Immediately Invoked Function Expression (IIFE)
 
-// (function(name){
-//     console.log("Merhaba: " + name);
-// })("Murat");
+(function(name){
+    console.log("Merhaba: " + name);
+})("Murat");
 
 
 const database = {

@@ -5,7 +5,6 @@ class Currency {
         this.secondCurrency = secondCurrency;
         this.url = "https://api.exchangeratesapi.io/latest?base=";
         this.amount = null;
-
     }
     exchange(){
 
@@ -20,14 +19,10 @@ class Currency {
             let total = parity * amount2;
             
             resolve(total);
-
-
         })
         .catch(err => reject(err));
 
-
         });
-        
 
     }
     changeAmount(amount){
@@ -35,11 +30,8 @@ class Currency {
     }
     changeFirstCurrency(newFirstCurrency){
         this.firstCurrency = newFirstCurrency;
-
     }
     changeSecondCurrency(newSecondCurrency){
         this.secondCurrency = newSecondCurrency;
-        
     }
-
 }
