@@ -17,8 +17,10 @@ document.getElementById("btn").addEventListener("click",function(){
 
     const xhr = new XMLHttpRequest();
 
-    
-    xhr.onload = function(){
+    xhr.onprogress = function(){ // xhr status = 3
+        console.log("Process işleniyor... ", this.readyState);
+    }
+    xhr.onload = function(){  // xhr status = 4
         if (this.status === 200) {
             document.getElementById("ajax").textContent = this.responseText;
         
