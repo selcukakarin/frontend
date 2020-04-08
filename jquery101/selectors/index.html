@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='../jquery-3.4.1.min.js'></script>
+    <style>
+        button {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 5px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="display:flex">
+
+        <div style="flex:1">
+            <p>pppppppp</p>
+            <br>
+            <div class="first">first class</div>
+            <br>
+            <div> <span>div > span </span></div>
+            <br>
+            <div> <span class="nested">div > nested class </span></div>
+            <br>
+            <h3>first h3</h3>
+            <br>
+            <h1>h1h1h1</h1>
+            <br>
+            <h6>h6h6h6h6</h6>
+            <br>
+            <span>spanspan</span>
+            <br>
+            <p>ppppppp</p>
+            <br>
+            <h3 id="h3">h3h3h3h3</h3>
+            <br>
+            <h1>h1h1h1h1</h1>
+            <br>
+            <ul>
+                <li>JS</li>
+                <li>Jquery</li>
+                <li>Java</li>
+                <li>Python</li>
+            </ul>
+            <br>
+            <ul>
+                <li>JS</li>
+                <li>Jquery</li>
+                <li>Java</li>
+                <li>Python</li>
+            </ul>
+        </div>
+        <div style="flex:1">
+            <p><a href="#" target="_blank"> a with blank</a></p>
+            <br>
+            <p><a href="#">a href</a> </p>
+            <br>
+            <p><a href="#">a href</a> </p>
+            <br>
+            <button type="button">alone button</button>
+            <br>
+            <table border="1">
+                <tr>
+                    <td>Programming</td>
+                    <td>Language</td>
+                </tr>
+                <tr>
+                    <td>JS</td>
+                    <td>Jquery</td>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>Java</td>
+                </tr>
+                <tr>
+                    <td>C#</td>
+                    <td>C++</td>
+                </tr>
+                <tr>
+                    <td>Delphi</td>
+                    <td>C</td>
+                </tr>
+            </table>
+            <br>
+            <div></div>
+            <br>
+            <div>
+                <p>Has kullanımı için. Div benim ebeveynim</p>
+            </div>
+            <br>
+            <p><input type="image" src="pik.jpg" style="width:60px;height:60px;"></p>
+            <br>
+            <form action="">
+                <p>
+                    <label for="">Username:</label>
+                    <input type="text" id="username">
+                </p>
+                <p>
+                    <label for="">Password:</label>
+                    <input type="password" id="password">
+                </p>
+                <p>
+                    <label for="">Email:</label>
+                    <input type="email" id="email" value="example@gmail.com" disabled>
+                </p>
+                <p>
+                    <label for="">Message:</label>
+                    <textarea name="" id="message" cols="5" rows="3"></textarea>
+                </p>
+                <p>
+                    <input type="checkbox" id="agree">Sözleşmeyi okudum, kabul ediyorum.
+                </p>
+                <p>
+                    <label for="">
+                        <input type="radio" id="RadioGroup1" value="1" name="RadioGroup1_0">
+                    Bay</label>
+                    <label for="">
+                        <input type="radio" id="RadioGroup1" value="0" name="RadioGroup1_1">
+                    Bayan</label>
+                    <br>
+                </p>
+                <p><input type="file"></p>
+                <p><input type="reset" value="clear"></p>
+                <p><input type="submit" value="Send"></p>
+            </form>
+            <br>
+            <ul>
+                <li><a href="#">Google</a></li>
+                <li><a href="#">Yahoo</a></li>
+                <li><a href="#">Yandex</a></li>
+                <li><a href="#">Bing</a></li>
+            </ul>
+            <br>
+            <p>Selçuk akarın</p>
+            <br>
+            <ul>
+                <li>JS</li>
+                <li>Jquery</li>
+                <li>Java</li>
+                <li>Python</li>
+            </ul>
+            <br>
+            <ul>
+                <li>JS</li>
+                <li>Jquery</li>
+                <li>Java</li>
+                <li>Python</li>
+            </ul>
+        </div>
+        <div style="flex:1">
+            <button type="button" id="btn1">hide p</button>
+            <button type="button" id="btn2">hide first class</button>
+            <button type="button" id="btn3">hide id h3</button>
+            <button type="button" id="btn4">div > span</button>
+            <button type="button" id="btn5">div > nested class</button>
+            <button type="button" id="btn6">first h3</button>
+            <button type="button" id="btn7">ul first li</button>
+            <button type="button" id="btn8">ul first-child li</button>
+            <button type="button" id="btn9">a with blank</button>
+            <button type="button" id="btn10">a href</button>
+            <button type="button" id="btn11">button</button>
+            <button type="button" id="btn12">table even background red</button>
+            <button type="button" id="btn13">submit css color green and width</button>
+            <button type="button" id="btn14">checkbox width height</button>
+            <button type="button" id="btn15">checkbox checked width height</button>
+            <button type="button" id="btn16">Contains Selçuk</button>
+            <button type="button" id="btn17">Contains not</button>
+            <button type="button" id="btn18">not id = first</button>
+            <button type="button" id="btn19">disabled</button>
+            <button type="button" id="btn20">empty</button>
+            <button type="button" id="btn21">focus</button>
+            <button type="button" id="btn22">file</button>
+            <button type="button" id="btn23">header</button>
+            <button type="button" id="btn24">image</button>
+            <button type="button" id="btn25">input</button>
+            <button type="button" id="btn26">radio</button>
+            <button type="button" id="btn27">reset</button>
+            <button type="button" id="btn28">password</button>
+            <button type="button" id="btn29">text</button>
+            <button type="button" id="btn30">visible</button>
+            <button type="button" id="btn31">ul li:last</button>
+            <button type="button" id="btn32">ul li:even</button>
+            <button type="button" id="btn33">ul li:odd</button>
+            <button type="button" id="btn34">.first, :password, a</button>
+            <button type="button" id="btnAll">hide all</button>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                $('p').hide();
+            });
+            $("#btn2").click(function () {
+                $('.first').hide();
+            });
+            $("#btn3").click(function () {
+                $('#h3').hide();
+            });
+            $("#btnAll").click(function () {
+                $("*").hide();
+            });
+            $("#btn4").click(function () {
+                $("div>span").hide();
+            });
+            $("#btn5").click(function () {
+                $("div>.nested").hide();
+            });
+            $("#btn6").click(function () {
+                $("h3:first").hide();
+            });
+            $("#btn7").click(function () {
+                $("ul li:first").hide();
+            });
+            $("#btn8").click(function () {
+                $("ul li:first-child").hide();
+            });
+            $("#btn9").click(function () {
+                $("a[target='_blank']").hide();
+            });
+            $("#btn10").click(function () {
+                $("[href]").hide();
+            });
+            $("#btn11").click(function () {
+                $(":button").hide();
+            });
+            $("#btn12").click(function () {
+                $("tr:even").css("background-color", "red");
+            });
+            $("#btn13").click(function () {
+                $(":submit").css("background-color", "green").css("width", "100px");
+            });
+            $("#btn14").click(function () {
+                $(":checkbox").css("height", "100px").css("width", "100px");
+            });
+            $("#btn15").click(function () {
+                $(":checked").css("height", "100px").css("width", "100px");
+            });
+            $("#btn16").click(function () {
+                $("p:contains(Selçuk)").css("height", "100px").css("width", "100px").css("background","green");
+            });
+            $("#btn17").click(function () {
+                $("a:not(':contains(Google)')").css("height", "100px").css("width", "100px").css("background","green");
+            });
+            $("#btn18").click(function () {
+                $("div:not(#first)").css("height", "100px").css("background","green");
+            });
+            $("#btn19").click(function () {
+                $(":disabled").css("height", "100px").css("background","green");
+            });
+            $("#btn20").click(function () {
+                $("div:empty").css("height", "100px").css("width", "100px").css("background","green");
+            });
+            $("#btn21").click(function () {
+                $(":focus").css("height", "100px").css("width", "100px").css("background","green");
+            });
+            $("#btn22").click(function () {
+                $(":file").css("background","green");
+            });
+            $("#btn23").click(function () {
+                $(":header").css("background","green");
+            });
+            $("#btn24").click(function () {
+                $(":image").css("height","100px");
+            });
+            $("#btn25").click(function () {
+                $(":input").css("background","green");
+            });
+            $("#btn26").click(function () {
+                $(":radio").css("height", "100px").css("width", "100px").css("background","green");
+            });
+            $("#btn27").click(function () {
+                $(":reset").css("height", "100px").css("width", "100px").css("background","green");
+            });
+            $("#btn28").click(function () {
+                $(":password").css("height", "100px").css("width", "100px").css("background","green");
+            });
+            $("#btn29").click(function () {
+                $(":text").css("height", "100px").css("width", "100px").css("background","green");
+            });
+            $("#btn30").click(function () {
+                $(":visible").css("background","green");
+            });
+            $("#btn31").click(function () {
+                $("ul li:last").css("background","purple");
+            });
+            $("#btn32").click(function () {
+                $("ul li:even").css("background","green");
+            });
+            $("#btn33").click(function () {
+                $("ul li:odd").css("background","purple");
+            });
+            $("#btn34").click(function () {
+                $(".first, :password, a").css("background","purple");
+            });
+            $("#btnAll").click(function () {
+                $("*").hide();
+            });
+        });
+    </script>
+</body>
+
+</html>
