@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='../jquery-3.4.1.min.js'></script>
+    <title>Events</title>
+</head>
+
+<body>
+    <div style="display:flex">
+        <div style="flex:1">
+            <h2>dblclick</h2>
+            <p>click</p>
+            <h1>mouseenter</h1>
+            <h3>mouseleave</h3>
+            <h4>mousedown</h4>
+            <h5>mouseup</h5>
+            <h6>hover</h6>
+            <div>Keypress sayısı = <span>0</span></div>
+            <div>username: <input type="text" name="username" id="username"></div>
+            <div class="multiple_event">multiple_event</div>
+            <div class="click_mouseleave">click_mouseleave</div>
+            <div class="on_off">
+                <button class="on">On</button>
+                <button class="off">Off</button>
+            </div>
+            <span class="undelegate" style="background:gray">span - delegate undelegate</span>
+            <div style="background:purple">
+                <span>Div içindeki paragraf - delegate undelegate</span>
+            </div>
+            <input type="text" class="change">
+            <input type="text" class="select">
+            <div id="result"></div>
+            <div class="one">One</div>
+            <div class="animate">Animate</div>
+            <div class="proxy">proxy</div>
+            <button id="proxy">proxy</button>
+            <div>tarayıcının boyutunu <div class="counter">0</div> kez değiştirdin.</div>
+            <div class="width">Width: </div>
+            <div class="height">Height: </div>
+            <div id="scroll" style="border:1px solid black;width:200px;height:100px;overflow:scroll;">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi asperiores dicta esse illum animi
+                nihil
+                tenetur minus totam temporibus recusandae quidem qui autem doloremque porro aperiam, incidunt amet
+                obcaecati
+                velit sit quasi, aspernatur, iste quas. Aperiam amet, molestiae mollitia, ex voluptate ipsum ducimus
+                cumque
+                assumenda culpa aliquam dicta rem est quos quae doloribus perspiciatis dolorum error recusandae
+                asperiores
+                sequi? Debitis saepe, fuga ducimus sequi dolores alias corrupti, quam perferendis soluta illo, libero
+                cum
+                exercitationem quia incidunt distinctio voluptatum consequatur tempore fugiat facere. Saepe deserunt,
+                non
+                incidunt harum est consequuntur facere! Sequi alias odit eligendi dolores neque animi labore facere
+                laborum?
+            </div>
+            <span id="say">0</span>
+        </div>
+        <div style="flex:1">
+            <form id="form1" action="">
+                <div>Username: <input type="text" name="username"></div>
+                <div>Passowrd: <input type="password" name="password"></div>
+                <input type="submit" value="Submit button">
+            </form>
+            <input type="text" id="trigger_input" value="Selçuk">
+            <div id="trigger_text">Result</div>
+            <button id="trigger_btn">trigger</button>
+            <button id="triggerhandler_btn">triggerhandler_btn</button>
+            <a href="" id="link">Link</a>
+            <button id="ButtonAsLink">ButtonAsLink</button>
+            <div id="focusinout" style="border:1px solid black;padding:15px">
+                Username: <input type="text" id="username2">
+                Password: <input type="password" id="password2">
+            </div>
+            <div id="mousemove">Mouse move</div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $("p").click(function () {
+                $(this).css("background", "green")
+            });
+            $("h2").dblclick(function () {
+                $(this).css("background", "green")
+            });
+            $("h1").mouseenter(function () {
+                $(this).css("background", "green")
+            });
+            $("h3").mouseleave(function () {
+                $(this).css("background", "green")
+            });
+            $("h4").mousedown(function () {
+                $(this).css("background", "green")
+            });
+            $("h5").mouseup(function () {
+                $(this).css("background", "green")
+            });
+            $("h6").hover(function () {
+                $(this).css("background", "green")
+            }, function () {
+                $(this).css("background", "white")
+            });
+            $("input").focus(function () {
+                $(this).css("background", "green")
+            });
+            $("input").blur(function () {
+                $(this).css("background", "gray")
+            });
+            $("input").keydown(function () {
+                $(this).css("background", "blue")
+            });
+            $("input").keyup(function () {
+                $(this).css("background", "yellow")
+            });
+            var i = 0;
+            $("input").keypress(function () {
+                $("span").text(i += 1);
+            });
+            $(".multiple_event").on({
+                mouseenter: function () {
+                    $(this).css("background", "darkred").css("height", "90px")
+                },
+                mouseleave: function () {
+                    $(this).css("background", "gray").css("height", "50px")
+                },
+                click: function () {
+                    $(this).css("background", "yellow").css("height", "150px")
+                },
+            });
+            $(".click_mouseleave").on("click mouseleave", function () {
+                $(this).css("background", "lightblue").css("height", "50px")
+            });
+            $(".on").on("click", function () {
+                $(".on_off").css("background", "red");
+            })
+            $(".off").click(function () {
+                $(".on").off("click");
+            })
+            $("div").delegate("span", "click", function () {
+                $("div>span").css("background", "pink").css("height", "50px")
+            })
+            $(".undelegate").click(function () {
+                $("div").undelegate();
+            })
+            $(".change").change(function () {
+                alert("inputta değişiklik oldu.")
+            })
+            $(".select").select(function () {
+                $("#result").text("İnput select çalıştı.")
+            })
+            $(".one").one("click", function () {
+                alert("Ben bir kez çalışırım")
+            })
+            $(".animate").one("click", function () {
+                $(this).animate({
+                    fontSize: "+=6px"
+                });
+            })
+            var objPerson = {
+                name: "Selçuk",
+                age: 25,
+                test: function () {
+                    $(".proxy").text("Isim : " + this.name + " Yas: " + this.age);
+                }
+            };
+            $("#proxy").click($.proxy(objPerson, "test"));
+            var x = 0;
+            $(window).resize(function () {
+                $(this).css("height", "+=10px").css("width", "+=10px")
+                $(".counter").text(x += 1)
+            })
+
+            function resizer() {
+                var w, h;
+                w = $(window).width();
+                h = $(window).height();
+                $(".width").text(w);
+                $(".height").text(h);
+            }
+            resizer()
+            $(window).resize(resizer)
+            var z = 0;
+            $("#scroll").scroll(function () {
+                $("#say").text(z += 1)
+            })
+            $("#form1").submit(function(){
+                alert("form1 submit edildi")
+            })
+            $("#trigger_input").select(function(){
+                $("#trigger_text").text("Metni seçtiniz");
+            })
+            $("#trigger_btn").click(function(){
+                $("#trigger_input").trigger("select")
+            })
+            $("#triggerhandler_btn").click(function(){
+                $("#trigger_input").triggerHandler("select")
+            })
+            $("#link").click(function(){
+                alert("Linke tıkladın")
+            })
+            $("#ButtonAsLink").click(function(){
+                $("#link").trigger("click")
+            })
+            $("#focusinout").focusin(function(){
+                $(this).css("background","darkred");
+            })
+            $("#focusinout").focusout(function(){
+                $(this).css("background","yellow")
+            })
+            var a=0;
+            $("#mousemove").mousemove(function(){
+                $("#mousemove").text(x+=1)
+            })
+        });
+    </script>
+</body>
+
+</html>

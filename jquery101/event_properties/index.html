@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='../jquery-3.4.1.min.js'></script>
+    <title>Events</title>
+</head>
+
+<body>
+    <div style="display:flex">
+        <div style="flex:1">
+            <div id="currentTarget1">currentTarget1</div>
+            <div id="currentTarget2">currentTarget2</div>
+            <div id="currentTarget3">currentTarget3</div>
+            <div id="eventData1">eventData1</div>
+            <div id="eventData2">eventData2</div>
+            <div id="eventDelegateTarget" style="height:50px;background:yellow">eventDelegateTarget
+            <button id="eventDelegateTarget_btn">Click</button>
+            </div>
+            <div id="isDefaultPrevented">
+                isDefaultPrevented
+            </div>
+            <div id="isPropagationStopped">
+                isPropagationStopped
+            </div>
+            <div id="isImmediatePropagationStopped">
+                isImmediatePropagationStopped
+            </div>
+            <div id="someNamespace">someNamespace</div>
+            <div id="pageXY">pageXY</div>
+            <a id="preventDefault_1" href="www.google.com.tr">Google</a>
+            <h3 id="isRelated">isRelated</h1>
+            <button id="result_btn">Result</button>
+            <span id="result_span">Result</span>
+            <div id="stopImmediatePropagation_1">stopImmediatePropagation_1</div>
+        </div>
+        <div style="flex:1">
+            <div id="stopPropagation_Base" 
+            style=" height:150px;width:200px;padding:15px;border:1px solid black;background:darkkhaki">
+            stopPropagation_base
+                <div id="stopPropagation_First" style="background:lightblue">stopPropagation_First</div>
+                <div id="stopPropagation_Second" style="background:pink">stopPropagation_Second</div>
+            </div>
+            <div id="eventTarget" style="color:red">eventTarget</div>
+            <div id="eventType" style="color:blue">eventType</div>
+            <div id="eventWhich" style="color:purple">eventWhich</div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $("#currentTarget1, #currentTarget2").click(function(){
+                alert(event.currentTarget === this);
+            });
+            $("#eventData1, #eventData2").each(function(i){
+                $(this).on("click",{x:i},function(event){
+                    alert($(this).index() + ". div + "+event.data.x +" veri");
+                });
+            });
+            $("#eventDelegateTarget").on("click","button", function(event){
+                $(event.delegateTarget).css("background","red");
+            });
+            $("#isDefaultPrevented").click(function(event){
+                event.preventDefault();
+                alert(event.isDefaultPrevented());
+            });
+            $("#isPropagationStopped").click(function(event){
+                event.stopPropagation();
+                alert(event.isPropagationStopped());
+            });
+            $("#isImmediatePropagationStopped").click(function(event){
+                event.stopImmediatePropagation();
+                alert(event.isImmediatePropagationStopped());
+            });
+            $("#someNamespace").on("custom.someNamespace",function(event){
+                alert(event.namespace);
+            });
+            $(document).mouseover(function(event){
+                $("#pageXY").text("X: "+event.pageX+" ,Y: "+event.pageY);
+            });
+            $("#someNamespace").click(function(event){
+                $(this).trigger("custom.someNamespace");
+            });
+            $("#preventDefault_1").click(function(event){
+                event.preventDefault()
+            });
+            $(window).mouseenter(function(event){
+                $("#isRelated").html(event.relatedTarget.nodeName);
+            });
+            $("#result_btn").click(function(){
+                return "Hello JQUERY";
+            });
+            $("#result_btn").click(function(event){
+                $("#result_span").text(event.result);
+            });
+            $("#stopImmediatePropagation_1").click(function(event){
+               alert("1");
+            });
+            $("#stopImmediatePropagation_1").click(function(event){
+               alert("2");
+               event.stopImmediatePropagation()
+            });
+            $("#stopImmediatePropagation_1").click(function(event){
+               alert("3");
+            });
+            $("#stopPropagation_First").click(function(event){
+                alert("stopPropagation_First tıklandı")
+                event.stopPropagation()
+            })
+            $("#stopPropagation_Second").click(function(event){
+                alert("stopPropagation_Second tıkladın");
+            })
+            $("#stopPropagation_Base").click(function(event){
+                alert("stopPropagation_Base tıklandı");
+            })
+            $(window).click(function(event){
+                $("#eventTarget").html(event.target.nodeName+" elementi tarafından tetiklendi.")
+            })
+            $(window).keydown(function(event){
+                $("#eventWhich").text("Key : "+event.which)
+            })
+        });
+    </script>
+</body>
+
+</html>
