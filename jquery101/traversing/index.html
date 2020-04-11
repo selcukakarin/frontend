@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='../jquery-3.4.1.min.js'></script>
+    <title>Traversing</title>
+    <style>
+        .ancestors *,
+        .descendants *,
+        .parent * {
+            display: block;
+            border: 2px solid gray;
+            color: purple;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display:flex;">
+        <div style="flex:1">
+            <div class="ancestors">
+                <div style="width:500px;">div (great-grandparent)
+                    <ul>
+                        <li>li (direct parent)
+                            <span id="span1">span</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="width:500px">div (grandparent)
+                    <p>p (direct parent)
+                        <span id="span2">span</span>
+                    </p>
+                </div>
+
+            </div>
+            <button id="parent">parent</button>
+            <button id="parents">parents</button>
+            <button id="parentsDiv">parentsDiv</button>
+            <button id="parentsDivUntil">parentsDivUntil</button>
+
+            <div class="descendants" style="width:500px">div (mevcut element)
+                <p class="span3">P (child)
+                    <span id="span3">Span (grandchild)</span>
+                </p>
+                <p>P (child)
+                    <span id="span4">Span (grandchild)</span>
+                </p>
+                <span id="span5">Span (child)</span>
+            </div>
+            <button id="children">children</button>
+            <button id="span3_btn">span3_btn</button>
+            <button id="find_btn">find_btn</button>
+            <button id="findAll_btn">findAll_btn</button>
+        </div>
+        <div style="flex:1">
+            <div id="parent" class="parent"> div (parent)
+                <div id="p">p (first)</div>
+                <div id="span">span</div>
+                <div id="h2">h2</div>
+                <div id="h3">h3</div>
+                <div id="pLast">p (Last)</div>
+            </div>
+            <button id="siblings">siblings</button>
+            <button id="h2_p_plast">h2_p_plast</button>
+            <button id="next">next</button>
+            <button id="nextAll">nextAll</button>
+            <button id="nextUntil">nextUntil</button>
+            <button id="prev">prev</button>
+            <button id="prevAll">prevAll</button>
+            <button id="prevUntil">prevUntil</button>
+
+            <div id="lastFirst">
+                <div class="bir" style="border:1px solid black;padding:10px;">
+                    <p>Divin içindeki ilk paragraf</p>
+                    <p>Divin içindeki ikinci paragraf</p>
+                </div>
+                <br>
+                <div class="iki" style="border:1px solid black;padding:10px;">
+                    <p>Divin içindeki ilk paragraf</p>
+                    <p>Divin içindeki ikinci paragraf</p>
+                </div>
+                <br>
+                <div class="uc" style="border:1px solid black;padding:10px;">
+                    <p>Divin içindeki ilk paragraf</p>
+                    <p>Divin içindeki ikinci paragraf</p>
+                </div>
+                <br>
+            </div>
+            <button id="first_btn">first_btn</button>
+            <button id="last_btn">last_btn</button>
+            <button id="eq_btn0">eq_btn0</button>
+            <button id="eq_btn1">eq_btn1</button>
+            <button id="eq_btn2">eq_btn2</button>
+            <button id="filter">filter</button>
+            <button id="not">not</button>
+            <button id="add">add</button>
+        </div>
+    </div>
+
+
+    <script>
+        $(function () {
+            $("#parent").click(function () {
+                $("#span1, #span2").parent().css({
+                    "color": "red",
+                    "border": "2px solid red"
+                })
+            })
+            $("#parents").click(function () {
+                $("#span1, #span2").parents().css({
+                    "color": "red",
+                    "border": "2px solid red"
+                })
+            })
+            $("#parentsDiv").click(function () {
+                $("#span1, #span2").parents("div").css({
+                    "color": "red",
+                    "border": "2px solid red"
+                })
+            })
+            $("#parentsDivUntil").click(function () {
+                $("#span1, #span2").parents("div").css({
+                    "color": "red",
+                    "border": "2px solid red"
+                })
+            })
+            $("#span3_btn").click(function () {
+                $(".descendants").children("p.span3").css({
+                    "color": "red",
+                    "border": "2px solid red"
+                })
+            })
+            $("#children").click(function () {
+                $(".descendants").children().css({
+                    "color": "red",
+                    "border": "2px solid red"
+                })
+            })
+            $("#find_btn").click(function () {
+                $(".descendants").find("span").css({
+                    "color": "red",
+                    "border": "2px solid red"
+                })
+            })
+            $("#findAll_btn").click(function () {
+                $(".descendants").find("*").css({
+                    "color": "red",
+                    "border": "2px solid red"
+                })
+            })
+            $("#siblings").click(function () {
+                $("#h2").siblings().css({
+                    "color": "red",
+                    "border": "2px solid red"
+                })
+            })
+            $("#h2_p_plast").click(function () {
+                $("#h2").siblings("#p, #pLast").css({
+                    "color": "red",
+                    "border": "2px solid red"
+                })
+            })
+            $("#next").click(function () {
+                $("#h2").next().css({
+                    "color": "red",
+                    "border": "2px solid red"
+                })
+            })
+            $("#nextAll").click(function () {
+                $("#h2").nextAll().css({
+                    "color": "red",
+                    "border": "2px solid red"
+                })
+            })
+            $("#nextUntil").click(function () {
+                $("#p").nextUntil("#h3").css({
+                    "color": "red",
+                    "border": "2px solid red"
+                })
+            })
+            $("#prev").click(function () {
+                $("#h2").next().css({
+                    "color": "red",
+                    "border": "2px solid red"
+                })
+            })
+            $("#prevAll").click(function () {
+                $("#h2").prevAll().css({
+                    "color": "red",
+                    "border": "2px solid red"
+                })
+            })
+            $("#prevUntil").click(function () {
+                $("#h3").prevUntil("#p").css({
+                    "color": "red",
+                    "border": "2px solid red"
+                })
+            })
+            $("#first_btn").click(function () {
+                $("#lastFirst>div").first().css({
+                    "background":"darkkhaki"
+                })
+            })
+            $("#last_btn").click(function () {
+                $("#lastFirst>div").last().css({
+                    "background":"darkkhaki"
+                })
+            })
+            $("#eq_btn0").click(function () {
+                $("#lastFirst>div").eq(0).css({
+                    "background":"darkkhaki"
+                })
+            })
+            $("#eq_btn1").click(function () {
+                $("#lastFirst>div").eq(1).css({
+                    "background":"darkkhaki"
+                })
+            })
+            $("#eq_btn2").click(function () {
+                $("#lastFirst>div").eq(2).css({
+                    "background":"darkkhaki"
+                })
+            })
+            $("#filter").click(function () {
+                $("#lastFirst>div").filter(".iki").css({
+                    "background":"darkkhaki"
+                })
+            })
+            $("#not").click(function () {
+                $("#lastFirst>div").not(".iki").css({
+                    "background":"darkkhaki"
+                })
+            })
+            $("#add").click(function () {
+                $(".bir").add(".iki").add("#pLast").css({
+                    "background":"darkkhaki"
+                })
+            })
+
+
+        });
+    </script>
+</body>
+
+</html>
