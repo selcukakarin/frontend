@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='../jquery-3.4.1.min.js'></script>
+    <title>Events</title>
+    <style>
+    button{
+        padding:10px;
+        margin:5px;
+    }
+    .red{
+        color:red;
+    }
+    .blue{
+        color:blue;
+    }
+    .pink{
+        color:pink;
+    }
+    </style>
+</head>
+
+<body>
+    <div style="display:flex">
+        <div style="flex:1">
+            <form action="">
+                <input type="text" value="Selçuk Akarın"><br>
+                <textarea name="" id="" cols="30"
+                    rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut praesentium ipsam, quisquam facilis aspernatur blanditiis earum neque porro. Iste aut incidunt dolorum officia ex ab? Delectus modi quia, autem quis enim, aspernatur blanditiis consequuntur amet rem tempora unde quae illum accusantium itaque vero, ea provident fuga! Dolorem omnis natus quae quis eum mollitia debitis aut quas tenetur dicta deleniti non quisquam unde explicabo voluptatibus maiores voluptatum repudiandae, aliquid quasi obcaecati vel laudantium vitae! Distinctio suscipit tempora pariatur iusto doloribus quo provident quae quibusdam ab odio animi maxime praesentium vitae, beatae, consectetur sequi minus. Voluptatibus doloremque numquam cumque cupiditate adipisci. Eum.</textarea><br>
+                <input type="checkbox" name="confirm" value="1" checked>Onayla <br>
+                <select name="" id="">
+                    <option >JS</option>
+                    <option selected >Jquery</option>
+                    <option >React JS</option>
+                </select><br>
+                <select multiple>
+                    <option >C#</option>
+                    <option selected >Java</option>
+                    <option >Python</option>
+                </select><br>
+                <input type="radio" name="gender" value="1" checked>Kadın
+                <input type="radio" name="gender" value="0" checked>Erkek
+            </form>
+            <button id="mybtn">mybtn</button>
+            <p id="result"></p>
+            <a id="a1" href="www.google.com.tr">Google</a>
+            <button id="attrbtn">attrbtn</button>
+
+            <p id="result1">0000000000000</p>
+            <p id="result2">0000000000000</p>
+            <input id="result3" type="text" value="1111111111">
+            <button id=showText>showText</button>
+            <button id=showHtml>showHtml</button>
+            <button id=showVal>showVal</button>
+
+            <p id="result55"><b>callbackHTML</b> with html</p>
+            <button id=callbackHTML>callbackHTML - new text old text</button>
+            
+            <a href="www.google.com" id="a2">Google</a>
+            <button id=changeHref>changeHref</button>
+
+        </div>
+        <div style="flex:1">
+            <p id="appendText_p1"style="padding:25px; border:1px solid black;">appendText_p1</p>
+            <p id="appendText_p2"style="padding:25px; border:1px solid black;">appendText_p2</p>
+            <ol id="appendLi_ol" style="padding:25px; border:1px solid black;">
+                <li>React</li>
+                <li>Angular</li>
+                <li>Meteor</li>
+            </ol>
+            <button id="appendText_btn">appendText_btn</button>
+            <button id="appendList_btn">appendList_btn</button>
+            <button id="prependText_btn">prependText_btn</button>
+            <button id="prependList_btn">prependList_btn</button>
+            <button id="appendFunc_btn" onclick="appendText()">appendFunc_btn</button>
+            <button id="afterText_btn" onclick="afterText()">afterText_btn</button>
+            <button id="insertBefore_btn">insertBefore_btn</button>
+            <button id="insertAfter_btn">insertAfter_btn</button>
+        </div>
+        <div style="flex:1">
+        <div id="removeEmpty" style="background:lightblue">
+            <p>Selam</p>
+            <p>Selam</p>
+            <p>Selam</p>
+            <p>Selam</p>
+        </div>
+        <button id="btnRemove">btnRemove</button>
+        <button id="btnEmpty">btnEmpty</button>
+
+        <div id="removeEmpty2" style="background:lightblue">
+            <p class="hey">hey</p>
+            <p id="mrb">mrb</p>
+            <p>Selam</p>
+            <p>Selam</p>
+        </div>
+        <button id="btnRemove2">btnRemove2</button>
+
+        <div id="removeEmpty3" style="background:lightblue">
+            <p class="hey">hey</p>
+            <p id="mrb" class="blue">mrb</p>
+            <p class="pink">Selam</p>
+            <p>Selam</p>
+        </div>
+        <button id="btnAddClass">btnAddClass</button>
+        <button id="btnRemoveClass">btnRemoveClass</button>
+        <button id="btnToggleClass">btnToggleClass</button>
+        <button id="dimension_btn">dimension_btn</button>
+        <div id="dimension" 
+        style="height:400px;width:400px;padding:5px;margin:10px;background:lightblue;border:4px black solid"></div>
+        </div>
+
+    </div>
+
+    <script>
+        $(function () {
+            let getValue="";
+            $("#mybtn").click(function(){
+                getValue +="input:text = "+$("input:text").val()+"<br>";
+                getValue +="textarea = "+$("textarea").val()+"<br>";
+                getValue +="input:checkbox:checked = "+$("input:checkbox:checked").val()+"<br>";
+                getValue +="select = "+$("select").val()+"<br>";
+                getValue +="select[multiple] = "+$("select[multiple]").val()+"<br>";
+                getValue +="input:radio:checked = "+$("input:radio:checked").val()+"<br>";
+                $("#result").html(getValue)
+            })
+            $("#attrbtn").click(function(){
+                alert($("#a1").attr("href"))
+            })
+            $("#showText").click(function(){
+                $("#result1").text("<b>Selçuk</b>")
+            })
+            $("#showHtml").click(function(){
+                $("#result2").html("<b>Selçuk</b>")
+            })
+            $("#showVal").click(function(){
+                $("#result3").val("Selçuk")
+            })
+            $("#callbackHTML").click(function(){
+                $("#result55").html(function(x,Text){
+                    return "eski html:"+Text+": Yeni html: Merhaba <b>Selçuk</b> (index: "+x+")";
+                })
+            })
+            $("#changeHref").click(function(){
+                // $("#a2").attr("href","facebook.com")
+                $("#a2").attr({
+                    "href":"facebook.com",
+                    "title":"Başlık"
+                })
+            })
+            $("#appendText_btn").click(function(){
+                $("#appendText_p1").append(" <b> HELLO NEW TEXT </b>")
+                $("#appendText_p2").append(" <b> HELLO NEW TEXT </b>")
+            })
+            $("#appendList_btn").click(function(){
+                $("#appendLi_ol").append(" <li> HELLO NEW Lİ </li>")
+            })
+            $("#prependText_btn").click(function(){
+                $("#appendText_p1").prepend(" <b> HELLO NEW TEXT </b>")
+                $("#appendText_p2").prepend(" <b> HELLO NEW TEXT </b>")
+            })
+            $("#prependList_btn").click(function(){
+                $("#appendLi_ol").prepend(" <li> HELLO NEW Lİ </li>")
+            })
+
+            $("#insertBefore_btn").click(function(){
+                $("#appendLi_ol").before("<b>Seçtiğin elementin öncesine ekledim</b>");
+            })
+            $("#insertAfter_btn").click(function(){
+                $("#appendLi_ol").after("<b>Seçtiğin elementin sonrasına ekledim</b>");
+            })
+            $("#btnRemove").click(function(){
+                $("#removeEmpty").remove();
+            })
+            $("#btnEmpty").click(function(){
+                $("#removeEmpty").empty();
+            })
+            $("#btnRemove2").click(function(){
+                $("#removeEmpty2>p").remove(".hey, #mrb");
+            })
+            $("#btnAddClass").click(function(){
+                $("#removeEmpty3>p").addClass("red selcuk");
+            })
+            $("#btnRemoveClass").click(function(){
+                $("#removeEmpty3>p").removeClass("red selcuk pink blue");
+            })
+            $("#btnToggleClass").click(function(){
+                $("#removeEmpty3>p").toggleClass("red");
+            })
+            $("#dimension_btn").click(function(){
+                var txt="";
+                txt+="element - div width: "+$("#dimension").width()+"<br>";
+                txt+="element - div height: "+$("#dimension").height()+"<br>";
+                txt+="element+padding - div innerWidth: "+$("#dimension").innerWidth()+"<br>";
+                txt+="element+padding - div innerHeight: "+$("#dimension").innerHeight()+"<br>";
+                txt+="element+padding+border - div outerWidth: "+$("#dimension").outerWidth()+"<br>";
+                txt+="element+padding+border - div outerHeight: "+$("#dimension").outerHeight()+"<br>";
+                txt+="element+padding+border+margin - div outerWidth(true): "+$("#dimension").outerWidth(true)+"<br>";
+                txt+="element+padding+border+margin - div outerHeight(true): "+$("#dimension").outerHeight(true)+"<br>";
+                $("#dimension").html(txt);
+            })
+        });
+        function appendText(){
+                var txt1,txt2,txt3;
+                txt1="<p>Yeni Metin</p>";   // with HTML
+                txt2=$("<p></p>").text("JQUERY PARAGRAPH");     // with JQUERY
+                txt3=document.createElement("p");    // with JS
+                txt3.innerHTML="JS PARAGRAPH";
+                $("body").append(txt1,txt2,txt3);
+            }
+        function afterText(){
+                var txt1,txt2,txt3;
+                txt1="<b>I </b>";   // with HTML
+                txt2=$("<i></i>").text("love ");     // with JQUERY
+                txt3=document.createElement("b");    // with JS
+                txt3.innerHTML="JQuery";
+                $("#appendText_p1").after(txt1,txt2,txt3);
+            }
+    </script>
+</body>
+
+</html>

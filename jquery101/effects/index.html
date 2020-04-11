@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='../jquery-3.4.1.min.js'></script>
+    <title>Events</title>
+</head>
+
+<body>
+    <div style="display:flex">
+        <div style="flex:1">
+            <div id="box" style="width:50px;height:50px;background:blue"></div>
+            <button id="hide">hide</button>
+            <button id="show">show</button>
+            <button id="toggle">toggle</button>
+            <br>
+            <div id="fadein3" style="width:100px;height:100px;display:none;background:red;float:left;margin-right:10px">
+            </div>
+            <div id="fadein2" style="width:100px;height:100px;display:none;background:red;float:left;margin-right:10px">
+            </div>
+            <div id="fadein1" style="width:100px;height:100px;display:none;background:red;float:left;margin-right:10px">
+            </div>
+            <div id="fadeToDiv" style="width:100px;height:100px;background:purple;margin-right:10px">FadeTo</div>
+            <button id="fadein">fade in</button>
+            <button id="fadeout">fade out</button>
+            <button id="fadeinout">fade in fade out with callback function</button>
+            <button id="fadeto">fadeto</button>
+            <div id="slidediv1" style="padding:10px;text-align:center;background:gray;border:1px solid green">slidediv1
+            </div>
+            <div id="slidediv2"
+                style="padding:90px;text-align:center;background:gray;border:1px solid green;display:none">
+                slidediv2</div>
+            <div id="slidediv3" style="padding:10px;text-align:center;background:yellow;border:1px solid green">
+                slidediv3</div>
+            <div id="slidediv4"
+                style="padding:90px;text-align:center;background:yellow;border:1px solid green;display:none">
+                slidediv4</div>
+            <div id="slidediv5" style="padding:10px;text-align:center;background:brown;border:1px solid green">slidediv5 - callback
+            </div>
+            <div id="slidediv6"
+                style="padding:90px;text-align:center;background:brown;border:1px solid green">
+                slidediv6</div>
+            <div id="pullright" style="width:100px;height:100px;background:darkred;color:white:padding:10px;position:absolute;">pullright</div>
+            
+
+        </div>
+        <div style="flex:1">
+            <button id="stopBtn">stopBtn</button>
+            <div id="slidediv98" style="padding:10px;text-align:center;background:gray;border:1px solid green">
+            slidediv98
+            </div>
+            <div id="slidediv99"
+                style="padding:90px;text-align:center;background:gray;border:1px solid green;display:none">
+                slidediv99</div>
+
+            <div id="chaining1" style="padding:10px;text-align:center;background:gray;border:1px solid green">
+            chaining1
+            </div>
+            <div id="chaining2"
+                style="padding:90px;text-align:center;background:gray;border:1px solid green;">
+                chaining2</div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $("#hide").click(function () {
+                // $("#hideShow").hide("slow");
+                $("#box").hide(500);
+            })
+            $("#show").click(function () {
+                // $("#hideShow").show("slow");
+                $("#box").show(500);
+            })
+            $("#toggle").click(function () {
+                $("#box").toggle();
+            })
+            $("#fadein").click(function () {
+                $("#fadein1").fadeIn();
+                $("#fadein2").fadeIn("slow");
+                $("#fadein3").fadeIn(1000);
+            })
+            $("#fadeout").click(function () {
+                $("#fadein1").fadeOut();
+                $("#fadein2").fadeOut("slow");
+                $("#fadein3").fadeOut(1000);
+            })
+            $("#fadeinout").click(function () {
+                $("#fadein1").fadeIn(500, function () {
+                    $(this).fadeOut(500)
+                });
+            })
+            $("#fadeto").click(function () {
+                $("#fadein1").fadeTo(500, 0.2);
+            })
+            $("#fadeToDiv").on("mouseover", function () {
+                $(this).fadeTo(500, 0.5)
+            })
+            $("#fadeToDiv").on("mouseleave", function () {
+                $(this).fadeTo(500, 1)
+            })
+            $("#slidediv1").click(function () {
+                $("#slidediv2").slideDown("slow")
+            })
+            $("#slidediv1").dblclick(function () {
+                $("#slidediv2").slideUp("slow")
+            })
+            $("#slidediv3").click(function () {
+                $("#slidediv4").slideToggle("slow")
+            })
+            $("#slidediv5").click(function () {
+                $("#slidediv6").slideUp("slow", function () {
+                    $(this).slideDown("slow", function () {
+                        $(this).text("işlem tamamlandı");
+                    })
+                })
+            })
+            $("#pullright").click(function(){
+                $("#pullright").animate({
+                    left:"+=250px",
+                    width:"+=20px",
+                    height:"+=20px"
+                })
+            })
+            $("#slidediv98").click(function(){
+                $("#slidediv99").slideDown(3000)
+            })
+            $("#stopBtn").click(function(){
+                $("#slidediv99").stop()
+            })
+            $("#chaining1").click(function(){
+                $("#chaining2").slideUp(500)
+                .css("background","purple")
+                .slideDown(500)
+            })
+        });
+    </script>
+</body>
+
+</html>
