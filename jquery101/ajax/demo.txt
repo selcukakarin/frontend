@@ -1,0 +1,2 @@
+<h2>SELAM SELÇUK AKARIN</h2>
+<p id="p1">sayfa güncellenmeden dosyadan veri çekildi.</p>

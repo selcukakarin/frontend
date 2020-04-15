@@ -5,17 +5,13 @@ const programmer = {
     age : 25,
     email: "coskun.m.murat@gmail.com",
     langs : ["Python","Java","Javascript"],
-
     address : {
         city : "Ankara",
         street : "Bahçelievler"
     },
-
     work : function(){
         console.log("Programcı Çalışıyor...");
     }
-
-
 }
 
 value = programmer;

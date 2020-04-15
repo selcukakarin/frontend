@@ -68,12 +68,8 @@ const database = {
       console.log(`Id: ${id} Silindi`);  
     }
 }
-
 console.log(database.host);
-
 database.add();
-
-
 database.delete(10);
 
 

@@ -26,10 +26,10 @@ let value;
 
 value = window;
 value = window.location;
-value = window.location.host;
-value = window.location.hostname;
-value = window.location.port;
-value = window.location.href;
+value = window.location.host; // şu anki host
+value = window.location.hostname; // şu anki hostname
+value = window.location.port; // şu anki port
+value = window.location.href; // şu anki adres
 
 if (confirm("Sayfa yenilensin mi?")) {
     window.location.reload();
