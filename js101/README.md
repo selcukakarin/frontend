@@ -54,4 +54,4 @@ value = window.location.href; // şu anki adres
 
 
 ```
-!(JS Cheat Sheet)[https://github.com/selcukakarin/frontEnd/tree/master/js101/js-cheatsheet.pdf]
+(JS Cheat Sheet)[https://github.com/selcukakarin/frontEnd/tree/master/js101/js-cheatsheet.pdf]
