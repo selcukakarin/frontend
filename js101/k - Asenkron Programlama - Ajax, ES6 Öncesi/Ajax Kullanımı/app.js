@@ -41,6 +41,4 @@ document.getElementById("btn").addEventListener("click",function(){
     xhr.send();
 
 
-
-
 });

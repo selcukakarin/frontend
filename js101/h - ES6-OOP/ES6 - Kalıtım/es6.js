@@ -30,8 +30,8 @@ class Person { // Superclass, BaseClass
 }
 class Employee extends Person { // DerivedClass, Subclass,ChildClass
     constructor(name,age,salary) {
-        this.name = name;
-        this.age = age;
+        // this.name = name;
+        // this.age = age;
         super(name,age);
         this.salary = salary;
 
