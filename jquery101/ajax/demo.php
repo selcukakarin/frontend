@@ -1,1 +1,3 @@
-<?php echo 'apple'; ?>
+<?php 
+echo 'apple'; 
+?>

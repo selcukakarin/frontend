@@ -21,9 +21,10 @@
             <div id="ajax3">
                 <h2>ajax1 lesson3</h2>
             </div>
-            <div id="ajax4">
+            <button id="ajax4">
                 <h2>ajax1 lesson4</h2>
-            </div>
+            </button>
+            <div id="result">Sonuç</div>
         </div>
         <div style="flex:1">
         </div>
@@ -47,16 +48,11 @@
                 })
             })
             $("#ajax4").click(function () {
-                $.ajax({
-                    url: 'demo.php',
-                    type: 'GET',
-                    success: function (data) {
-                        console.log(data)
-                        console.log(typeof data)
-                        alert("verimiz: " + data);
-                    }
+                $.get("demo.php",function(data, status){
+                    console.log(data)
+                    $("#result").html("verimiz: "+data+"<br> Durum(status): "+status);
                 });
-            })
+            });
         });
     </script>
 </body>
