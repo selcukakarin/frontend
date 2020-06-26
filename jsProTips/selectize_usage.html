@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/selectize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.bootstrap3.min.css">
+    <style>
+    .main-container {
+        margin-top: 50px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container main-container">
+	<div class="row">
+		<div class="col-md-4">
+			<form>
+				<div class="form-group">
+					<label>Option Groups</label>
+					<select multiple id="select-gear" class="form-control" placeholder="Select gear...">
+						<option value="">Select gear...</option>
+						<optgroup label="Climbing">
+							<option value="pitons">Pitons</option>
+							<option value="cams">Cams</option>
+							<option value="nuts">Nuts</option>
+							<option value="bolts">Bolts</option>
+							<option value="stoppers">Stoppers</option>
+							<option value="sling">Sling</option>
+						</optgroup>
+						
+					</select>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<script>
+$('#select-gear').selectize({
+	plugins: ['remove_button'],
+	sortField: 'text'
+});
+</script>
+</body>
+</html>
